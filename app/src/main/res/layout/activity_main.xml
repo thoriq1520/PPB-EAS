@@ -176,7 +176,7 @@
                             android:focusable="true"
                             android:onClick="categoryClicked"
                             android:tag="entertainment"
-                            app:cardBackgroundColor="@color/pink_300"
+                            app:cardBackgroundColor="@color/gold"
                             app:cardCornerRadius="@dimen/dashboardNewsCategoryCardRadius"
                             app:cardElevation="0dp"
                             app:cardUseCompatPadding="false">
@@ -208,7 +208,7 @@
                                         android:layout_centerInParent="true"
                                         android:layout_margin="7dp"
                                         android:src="@drawable/ic_entertainment"
-                                        android:tint="@color/pink_300"
+                                        android:tint="@color/gold"
                                         tools:ignore="UseAppTint" />
 
                                 </RelativeLayout>
@@ -240,7 +240,7 @@
                             android:focusable="true"
                             android:onClick="categoryClicked"
                             android:tag="health"
-                            app:cardBackgroundColor="@color/light_green_300"
+                            app:cardBackgroundColor="@color/blue"
                             app:cardCornerRadius="@dimen/dashboardNewsCategoryCardRadius"
                             app:cardElevation="0dp"
                             app:cardUseCompatPadding="false">
@@ -270,7 +270,7 @@
                                         android:layout_centerInParent="true"
                                         android:layout_margin="@dimen/dashboardNewsCategoryCardImageMargin"
                                         android:src="@drawable/ic_health"
-                                        android:tint="@color/light_green_300"
+                                        android:tint="@color/blue"
                                         tools:ignore="UseAppTint" />
 
                                 </RelativeLayout>
@@ -364,7 +364,7 @@
                             android:focusable="true"
                             android:onClick="categoryClicked"
                             android:tag="sports"
-                            app:cardBackgroundColor="@color/red_300"
+                            app:cardBackgroundColor="@color/red"
                             app:cardCornerRadius="@dimen/dashboardNewsCategoryCardRadius"
                             app:cardElevation="0dp"
                             app:cardUseCompatPadding="false">
@@ -394,7 +394,7 @@
                                         android:layout_centerInParent="true"
                                         android:layout_margin="@dimen/dashboardNewsCategoryCardImageMargin"
                                         android:src="@drawable/ic_sports"
-                                        android:tint="@color/red_300"
+                                        android:tint="@color/red"
                                         tools:ignore="UseAppTint" />
 
                                 </RelativeLayout>
@@ -426,7 +426,7 @@
                             android:focusable="true"
                             android:onClick="categoryClicked"
                             android:tag="technology"
-                            app:cardBackgroundColor="@color/orange_300"
+                            app:cardBackgroundColor="@color/purple"
                             app:cardCornerRadius="@dimen/dashboardNewsCategoryCardRadius"
                             app:cardElevation="0dp"
                             app:cardUseCompatPadding="false">
@@ -456,7 +456,7 @@
                                         android:layout_centerInParent="true"
                                         android:layout_margin="@dimen/dashboardNewsCategoryCardImageMargin"
                                         android:src="@drawable/ic_technology"
-                                        android:tint="@color/orange_300"
+                                        android:tint="@color/purple"
                                         tools:ignore="UseAppTint" />
 
                                 </RelativeLayout>
