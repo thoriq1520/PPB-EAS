@@ -49,8 +49,8 @@ public class MainActivity extends AppCompatActivity implements LifecycleOwner, A
 
     @BindView(R.id.recyclerView)
     RecyclerView recyclerView;
-    @BindView(R.id.ivToolbarCountry)
-    ImageView ivToolbarCountry;
+//    @BindView(R.id.ivToolbarCountry)
+//    ImageView ivToolbarCountry;
 
 
     MainActivity context;
@@ -83,8 +83,8 @@ public class MainActivity extends AppCompatActivity implements LifecycleOwner, A
         recyclerView.setAdapter(adapterListNews);
 
 
-        if (pref.contains(countryPositionPref))
-            ivToolbarCountry.setImageResource(countrysIcons.getResourceId(pref.getInt(countryPositionPref, 0), 0));
+//        if (pref.contains(countryPositionPref))
+//            ivToolbarCountry.setImageResource(countrysIcons.getResourceId(pref.getInt(countryPositionPref, 0), 0));
 
         viewModel = ViewModelProviders.of(context).get(MainViewModel.class);
         viewModel.getNewsLiveData().observe(context, newsListUpdateObserver);
@@ -122,23 +122,6 @@ public class MainActivity extends AppCompatActivity implements LifecycleOwner, A
         Util.setSystemBarLight(this);
     }
 
-    private void showLanguageDialog() {
-        new AlertDialog.Builder(this).setCancelable(false)
-                .setTitle("Choose Country")
-                .setSingleChoiceItems(countrys, pref.getInt(countryPositionPref, 0), null)
-                .setNegativeButton(R.string.cancel, (dialog, which) -> dialog.dismiss())
-                .setPositiveButton(R.string.ok, (dialog, whichButton) -> {
-                    int selectedPosition = ((AlertDialog) dialog).getListView().getCheckedItemPosition();
-                    pref.edit().putInt(countryPositionPref, selectedPosition).apply();
-                    pref.edit().putString(Util.COUNTRY_PREF, getResources().getStringArray(R.array.countrysCodes)[selectedPosition]).apply();
-                    LocaleHelper.setLocale(MainActivity.this, getResources().getStringArray(R.array.countrysCodes)[selectedPosition]);
-                    recreate();
-                    dialog.dismiss();
-                })
-                .show();
-    }
-
-
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_search, menu);
@@ -173,10 +156,6 @@ public class MainActivity extends AppCompatActivity implements LifecycleOwner, A
 
     public void categoryClicked(View view) {
         viewModel.newsCategoryClick(String.valueOf(view.getTag()));
-    }
-
-    public void countryClick(View view) {
-        showLanguageDialog();
     }
 
     Observer<List<News>> newsListUpdateObserver = new Observer<List<News>>() {

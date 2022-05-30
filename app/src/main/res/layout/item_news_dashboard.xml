@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:bind="http://schemas.android.com/tools">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/tools">
 
     <data class="NewsBinding">
 
@@ -13,8 +15,7 @@
 
     </data>
 
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
+    <LinearLayout
         android:id="@+id/lyt_parent"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -77,12 +78,22 @@
                     android:layout_height="wrap_content"
                    android:layout_marginTop="5dp"
 
-                    android:text="@{news.newsAuthor}"
+                    android:text="@{`Author: ` + news.newsAuthor}"
                     android:textAllCaps="true"
                     android:textAppearance="@style/TextAppearance.AppCompat.Caption"
                     android:textColor="@color/grey_95"
                     app:fontFamily="sans-serif-medium"
                     />
+                <ImageView
+                    android:id="@+id/imgBookmark"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginTop="-18dp"
+                    android:layout_marginLeft="232dp"
+                    android:src="@mipmap/bookmark"
+                    />
+
+
 
                 <View
                     android:layout_width="0dp"
@@ -98,7 +109,7 @@
                         android:id="@+id/newsSourceName"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@{news.source.sourceName}"
+                        android:text="@{`Publisher: ` +  news.source.sourceName}"
                         android:textAllCaps="true"
                         android:textAppearance="@style/TextAppearance.AppCompat.Caption"
                         android:textColor="@color/grey_40"
@@ -119,6 +130,8 @@
                         android:textColor="@color/grey_40" />
 
                 </LinearLayout>
+
+
 
             </LinearLayout>
 
